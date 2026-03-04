@@ -1,0 +1,1251 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+body{
+  overflow-x:hidden;
+}
+
+/* 1. Define the font */
+@font-face {
+  font-family: 'main-font';
+  src: url('Fonts/Dream\ Avenue.ttf'),;
+}
+@font-face {
+  font-family: 'f2';
+  src: url('Fonts/fonnts.com-theseasons-lt.otf'),;
+}
+
+.btn{
+  padding: 8px 12px;
+  background-color: darkred;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.main-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.navbar {
+ 
+   position: fixed;
+  top: 0px;   /* initially hidden */
+  left: 0px;
+  width: 100%;
+  transition: all .7s ease;
+  z-index: 1000;
+    box-shadow: 0 0 50px 1px rgba(128, 128, 128, 0);
+
+
+}
+.nav-container{
+ max-width: 1380px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  margin: auto;
+  padding: 6px 0;
+  
+}
+
+nav.active {
+  top: -10px;
+  background-color: white;
+  box-shadow: 0 0 50px 1px rgba(128, 128, 128, 0.534);
+}
+
+nav.hide {
+  transform: translateY(-100%);
+}
+.nav-group {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* Space between links */
+}
+
+.logo {
+  text-align: center;
+  flex: 0 0 auto; /* Ensures the logo doesn't shrink or grow */
+}
+
+.logo img {
+  height: 80px; /* Adjust based on your logo size */
+  display: block;
+}
+
+/* Basic Link Styling */
+.nav-group a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-family: 'f2';
+}
+
+.nav-group a:hover {
+  color: darkred; 
+}
+
+.nav-last {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  color: white;
+  border-radius: 100px;
+}
+
+.icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkred;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.icon-circle svg{
+  color: white;
+  
+}
+
+.landing-page{
+  padding: 80px 0 0;
+  margin-top: 80px;
+  position: relative;
+  min-height: 200px;
+}
+h1, .landing-page span{
+  text-align: center;
+    font-family: 'main-font';
+  font-size: 10vw;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+
+}
+
+
+h1 img{
+  width: 10vw;
+  animation: img 10s infinite ease;
+  transition: .5s;
+  
+}
+
+@keyframes img{
+  to{
+
+  }
+  from{
+    rotate: 80deg;
+  }
+}
+
+.landing-page video {
+  border-radius: 50px;
+  transition: 1s;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+/* --- Section General Styles --- */
+.catering-section {
+    width: 100%;
+    padding: 40px 10px; /* reduced vertical spacing */
+    background-color: #fff;
+}
+
+.sec-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sec-header .badge {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    color: darkred;
+}
+
+.sec-header h2 {
+    font-size: 45px;
+      font-family: 'main-font';
+      font-weight: 600;
+    text-transform: uppercase;
+}
+
+.sec-header h2 span {
+    color: #000;
+      font-family: 'main-font';
+
+}
+
+/* --- Cards Container --- */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Modern way to add spacing between cards */
+}
+
+/* --- Individual Card --- */
+.catering-card {
+    padding: 30px 5px;
+    min-width: 250px;
+    max-width: 290px;
+    border-radius: 150px 150px 30px 30px; /* Smooth arch top */
+    background: #fff;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s ease;
+    border-top: 5px solid transparent;
+}
+
+.catering-card:hover {
+    transform: translateY(-10px);
+    border-top: 5px solid darkred;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-img img {
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+.catering-card:hover img {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.catering-card h3 {
+    font-size: 28px;
+    font-weight: 400;
+    font-family: 'f2';
+    margin: 0px 0 5px;
+    color: #333;
+font-family: 'Playfair Display', serif;
+    text-transform: capitalize;
+}
+
+.catering-card .description {
+    color: #777;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'poppins';
+    padding: 0px 20px;
+    line-height: 1.5;
+    max-width: 300px;
+    
+}
+
+.stars {
+    color: orange;
+    font-size: 18px;
+    display: flex;
+    gap: 2px;
+    margin-bottom: 18px;
+}
+
+.item-count {
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    background-color: #8B0000;
+        border: 2px solid darkred;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.item-count:hover {
+    background: transparent;
+    color: darkred;
+    border: 2px solid darkred;
+}
+
+
+/* --- Root Variables for easy changes --- */
+:root {
+    --accent-red: #d32f2f;
+    --text-main: #333;
+    --text-muted: #666;
+}
+
+.why-choose-us {
+    padding: 60px 0; /* trimmed top/bottom space */
+    font-family: 'main-font';
+    color: var(--text-main);
+    overflow: hidden;
+        border-radius: 50px;
+
+}
+
+.container {
+    width: 100%;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+/* --- Header --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+      font-family: 'main-font';
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section-header h2 span {
+    color: darkred;
+    font-weight: 600;
+    font-style: italic;
+    
+}
+
+.section-header p {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Grid Layout --- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr; /* Center is slightly wider */
+    align-items: center;
+    gap: 30px;
+}
+
+/* --- Feature Items --- */
+.feature-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid var(--accent-red);
+    border-radius: 10px 30%;
+}
+.feature-item{
+    background: rgba(211, 47, 47, 0.1);
+      border-radius: 10px;
+  padding: 20px;
+  transition: .5s;
+}
+.feature-item:hover{
+  scale: 1.05;
+}
+
+.feature-item h3 {
+    font-family: 'main-font', serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.icon-box {
+    font-size: 28px;
+    color: var(--accent-red);
+    margin-bottom: 10px;
+}
+
+/* --- Center Image & Frame --- */
+.image-center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-frame {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    z-index: 2;
+}
+
+.image-frame::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: -15px;
+    bottom: -15px;
+    border: 2px solid var(--accent-red);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.image-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(211, 47, 47, 0.1);
+    z-index: -1;
+    border-radius: 10px;
+    transform: translate(-10px, -10px);
+}
+
+.image-frame img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+      animation: img 10s infinite ease;
+
+    
+}
+
+/* --- Footer & Button --- */
+.section-footer {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.btn-menu {
+    background: var(--accent-red);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(211, 47, 47, 0.3);
+    transition: 0.3s ease;
+}
+
+.btn-menu:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(211, 47, 47, 0.4);
+    background: #b71c1c;
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 992px) {
+    .grid-layout {
+        grid-template-columns: 1fr; /* Stack vertically */
+        gap: 50px;
+    }
+
+    .feature-column.left, 
+    .feature-column.right {
+        text-align: center;
+        order: 2;
+    }
+
+    .image-center {
+        order: 1; /* Image appears first on mobile */
+    }
+
+    .section-header h2 {
+        font-size: 36px;
+    }
+}
+
+
+/* Variables for the specific colors in your screenshot */
+:root {
+   
+    
+    --purple-light: #f1f0ff;  /* Jo aapne diya */
+    --peach-light: #ffebdb;   /* Jo aapne diya */
+    --mint-light: #e6f7f1;    /* New Fresh Color */
+    --accent-blue: #1a237e;
+    --accent-orange: #f4511e;
+}
+
+.about-section {
+    padding: 60px 10px; /* reduced vertical gap */
+    background-color: #fff;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header h2 {
+    font-family: 'main-font', serif;
+    text-transform: uppercase;
+    font-size: 42px;
+    color: #2b1b1b;
+}
+
+.about-header h2 span {
+    color: darkred;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.about-header p {
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+/* --- The Grid --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+    width: 100%;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    
+  .about-grid:hover{
+    grid-template-columns: 1fr 1fr;
+}
+
+}
+.about-grid-2 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 25px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.grid-block {
+    border-radius: 30px;
+    padding: 50px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* --- Colors --- */
+.purple-bg { background-color: var(--purple-light); }
+.peach-bg { background-color: var(--peach-light); }
+
+/* --- Block 1: Overlapping Images --- */
+.image-block {
+    position: relative;
+    background-color: var(--purple-light); /* No background needed for the image wrapper */
+    overflow: visible;
+}
+
+.img-wrapper-top {
+    border-radius: 20px;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+
+.img-wrapper-top img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+}
+.shape-container{
+  height: 400px;
+}
+
+.shape-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;   
+    border-radius: 20px;
+  }
+
+.block-icon {
+    font-size: 35px;
+    color: var(--accent-blue);
+    margin-bottom: 20px;
+}
+
+.content-block h3 {
+    font-family: 'main-font', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+.about-grid-2 .content-block h3{
+    color: darkorange;
+}
+.about-grid-2 .content-block .block-icon{
+    color: darkorange;
+}
+
+.content-block p {
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+.cta-btn {
+    background-color: darkred;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    width: fit-content;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: translateX(5px);
+}
+.about-grid-3 .grid-block{
+    background-color: var(--mint-light);
+}
+
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Stacks everything in one column */
+    }
+
+    .image-block {
+        height: 350px; /* Give it space for images on mobile */
+    }
+
+    .img-wrapper-top {
+        height: 300px;
+    }
+
+    .img-wrapper-top img {
+        height: 300px;
+    }
+
+    .shape-container {
+        height: 300px;
+    }
+
+    .shape-container img {
+        height: 300px;
+    }
+
+    .grid-block {
+        padding: 30px;
+    }
+}
+
+
+/* Section Container */
+.menu-news-section {
+    max-width: 100%;
+    margin: 20px auto; /* less separation from previous section */
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-news-section .section-title {
+    font-size: 3.4rem;
+    margin-bottom: 34px;
+    font-weight: 500;
+    font-style: italic;
+    color: darkred;
+    font-family: 'poppins';
+    text-align: center;
+}
+
+.menu-news-section .section-title strong {
+    font-weight: 700;
+        font-family: 'main-font';
+        color: black;
+        font-style: normal;
+        text-transform: uppercase;
+
+}
+
+/* Grid Layout */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 20px;
+    transition: 1s;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    
+ .menu-grid:hover{
+        grid-template-columns: 1.5fr 1fr;
+}
+
+}
+
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+
+.menu-card {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    
+}
+
+.menu-card h3, .menu-card h4 {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-family: 'poppins';
+}
+
+.menu-card h3 { font-size: 1.5rem; font-weight: 400; };
+.menu-card h4 { font-size: 1.3rem; font-weight: 400; };
+
+
+.time-stamp {
+    position: relative;
+    z-index: 2;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Image Overlays for Text Readability */
+.img-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent , rgb(0, 0, 0) );
+    z-index: 1;
+}
+
+/* Specific Cards */
+.card-main {
+    height: 500px;
+    background-image: url('Assets/gal1.jpg');
+    background-position: center;
+}
+
+
+/* Right Side Cards */
+.card-purple {
+    background-color: var(--purple-light);
+    height: 240px;
+    justify-content: center;
+}
+.card-grey h4, .card-purple h4{
+    background-color: transparent;
+    backdrop-filter: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.card-grey .time-stamp, .card-purple .time-stamp {
+    position: relative;
+    z-index: 2;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+.badge2 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f26649;
+    color: white;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.card-grey {
+    background-color: var(--peach-light);
+    height: 240px;
+    justify-content: center;
+    color: #1a2a5e; /* Dark text for light background */
+}
+
+.card-grey .time-stamp {
+    color: #7a829e;
+}
+
+.icon-wrapper {
+    background-color: #1a5196;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Floating Plus Button */
+.add-btn {
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    background-color: #4dbcf1;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(77, 188, 241, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-grid { grid-template-columns: 1fr; }
+    .add-btn { position: relative; float: right; right: 0; bottom: 0; margin-top: 10px; }
+}
+@media (max-width: 480px) {
+    .bottom-left-grid { grid-template-columns: 1fr; }
+}
+
+/* Base container styling */
+.gallery-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* 12-Column Grid Setup */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 300px; /* Fixed height for consistent rows */
+  gap: 16px; /* Space between images */
+}
+
+/* Individual Item Styling */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  min-height: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle drop shadow */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Gradient overlay for text readability */
+.item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 16px 16px 16px;
+  /* Greenish-gold gradient based on your design */
+  background: linear-gradient(to top, rgb(0, 0, 0), transparent); 
+  display: flex;
+  align-items: flex-end;
+}
+
+.item-title {
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Grid Spans for Layout
+  Using a 12-column grid allows for the specific asymmetrical widths 
+*/
+.item-1 { grid-column: span 3; } /* 25% width */
+.item-2 { grid-column: span 6; } /* 50% width */
+.item-3 { grid-column: span 3; } /* 25% width */
+
+.item-4 { grid-column: span 4; } /* ~41% width */
+.item-5 { grid-column: span 4; } /* ~33% width */
+.item-6 { grid-column: span 4; } /* 25% width */
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+  .item-1, .item-2, .item-3, 
+  .item-4, .item-5, .item-6 {
+    grid-column: span 6; /* Turns into a 2-column layout */
+  }
+}
+
+@media (max-width: 600px) {
+  .item-1, .item-2, .item-3, 
+  .item-4, .item-5, .item-6 {
+    grid-column: span 12; /* Turns into a 1-column layout */
+  }
+}
+
+.sushi-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Replaced desert with a dark, moody sushi background from Unsplash */
+background: linear-gradient(135deg, #350000, #a70000);
+  padding: 50px 40px;
+  border-radius: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #ffffff;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 60px auto;
+}
+
+.sushi-cta-text {
+  max-width: 400px;
+}
+
+.sushi-cta-text h2 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0 0 12px 0;
+  color: rgb(255, 255, 255);
+}
+
+.sushi-cta-text p {
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.826);
+}
+
+/* Frosted glass container */
+.sushi-cta-form-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px;
+  border-radius: 16px;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.input-label {
+  color: #000000;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.input-label .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #555;
+  border-radius: 50%;
+}
+
+.input-field-wrapper {
+  display: flex;
+  align-items: center;
+  background: #f1f3f5;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.input-field-wrapper input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex-grow: 1;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.input-field-wrapper input::placeholder {
+  color: #adb5bd;
+}
+
+.clear-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-btn {
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+  background: #222222;
+}
+
+.btn-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sushi-cta {
+    padding: 40px 24px;
+  }
+  .sushi-cta-form-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .search-btn {
+    flex-direction: row;
+    padding: 16px;
+  }
+}
+
+
+.sushi-footer {
+background-color: black;
+padding: 0px 30px;
+border-top-left-radius: 100px;
+border-top-right-radius: 100px;
+}
+
+.footer-container{
+    max-width: 1380px;
+    margin: auto;
+     display: flex;
+     flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #f1f3f5;
+  padding: 60px 40px;
+  font-family: system-ui, -apple-system, sans-serif;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.footer-brand {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 20px;
+  filter: invert(1);
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #adb5bd;
+  margin: 0 0 24px 0;
+}
+
+.footer-btn {
+  background-color: #e63946; /* A pop of red/orange for the sushi theme */
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.footer-btn:hover {
+  background-color: #d62828;
+}
+
+.footer-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.footer-link-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link-col h4 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  font-family: 'f2';
+}
+
+.footer-link-col a {
+  color: #adb5bd;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-link-col a:hover {
+  color:darkred;
+}
+
+/* --- Global responsive font adjustments --- */
+@media (max-width: 992px) {
+  body { font-size: 15px; }
+  h1 { font-size: 8vw; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 24px; }
+  p, .footer-desc, .description, .item-title {
+    font-size: 16px;
+  }
+  .sec-header .badge { font-size: 20px; }
+  .about-section .about-header h2 { font-size: 32px; }
+  .about-section .about-header p { font-size: 18px; }
+  .menu-news-section .section-title { font-size: 2.8rem; }
+  .sushi-cta-text h2 { font-size: 2rem; }
+  .section-header h2{font-size: 32px;}
+}
+
+@media (max-width: 768px) {
+  body { font-size: 14px; }
+  .landing-page h1 { font-size: 11vw; }
+  .landing-page video{height: 80vh; object-fit: cover;}
+  h2 { font-size: 28px; }
+  h3 { font-size: 22px; }
+  .grid-block{display: flex; align-items: center;
+   justify-content: center; padding: 20px;}
+  .grid-block h3{font-size: 40px; text-align: center;}
+  .grid-block p{font-size: 14px; text-align: center;}
+  p, .footer-desc, .description, .item-title { font-size: 15px; }
+  .sec-header .badge { font-size: 18px; }
+  .sec-header h2{font-size: 32px;}
+  .about-header h2 { font-size: 32px; }
+  .about-header p { font-size: 15px; }
+  .menu-news-section .section-title { font-size: 2.4rem; }
+  .sushi-cta-text h2 { font-size: 1.8rem; }
+  .footer-container{
+    padding: 100px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 13px; }
+  h1 { font-size: 10vw; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 20px; }
+  p, .footer-desc, .description, .item-title { font-size: 14px; }
+  .sec-header .badge { font-size: 16px; }
+  .about-header h2 { font-size: 25px; }
+  .about-header p { font-size: 14px; }
+  .menu-news-section .section-title { font-size: 2rem; }
+  .sushi-cta-text h2 { font-size: 1.6rem; }
+}
+
