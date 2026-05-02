@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <nav class="navbar">
+            <div class="nav-container">
+
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Assets/sushi logo.png" alt="Food Logo">
+                    </a>
+                </div>
+
+                <ul class="nav-group">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-last">
+                    <div class="icon-circle">
+                        <svg width="17" height="17" class="icon-i" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+
+                    <div class="icon-circle">
+                        <svg width="18" height="18" class="icon-i" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="menu-toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="landing-page">
+            <h1 class="head">...our Gallery...</h1>
+            <img class="mainImg" src="Assets/menu-lan.jpeg" width="100%" style="border-radius: 100px;" alt="Sushi Gallery">
+        </section>
+
+         <section class="menu-news-section">
+            <h2 class="section-title"><strong>Featured</strong> gallery</h2>
+
+            <div class="menu-grid">
+                <div class="left-col">
+                    <div class="menu-card img-card card-main">
+                        <h3>Omakase Chef's Special <br> A Journey of Taste</h3>
+                        <span class="time-stamp">Available Daily</span>
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <div class="menu-card card-purple">
+                        <span class="badge2">New</span>
+                        <h4>Truffle Mayo Roll, Redefining <br> Fusion Flavor</h4>
+                        <span class="time-stamp">1 hour ago</span>
+                    </div>
+
+                    <div class="menu-card card-grey">
+                        <div class="icon-wrapper"><i class="fa-solid fa-fish-fins"></i></div>
+                        <h4>Chef predicts massive trend <br> in Aburi Sushi</h4>
+                        <span class="time-stamp">5 hours ago</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-container">
+            <div class="gallery-grid">
+
+                <div class="gallery-item item-1">
+                    <img src="Assets/gal2.jpg">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+                <div class="gallery-item item-2">
+                    <img src="Assets/gal2.webp">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+                <div class="gallery-item item-3">
+                    <img src="Assets/gal4.jpg" alt="Tea tasting">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+                <div class="gallery-item item-4">
+                    <img src="Assets/gal3.jpg" alt="Agricultural workshops">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+                <div class="gallery-item item-5">
+                    <img src="Assets/gal5.jpg" alt="Tea tasting">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+                <div class="gallery-item item-6">
+                    <img src="Assets/about-img-1.webp" alt="A miniature village">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="sushi-footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h1>sushi</h1>
+                <p class="footer-desc">
+                    Bringing the freshest catch from the ocean directly to your plate. Experience authentic, handcrafted
+                    sushi mastery in the heart of the city.
+                </p>
+                <button class="cta-btn">book now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="footer-links-container">
+                <div class="footer-link-col">
+                    <h4>Explore</h4>
+                    <a href="../index.html#menu">special Menu's</a>
+                    <a href="about.html#about">About us</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="../index.html#contact">Contact us</a>
+                </div>
+                <div class="footer-link-col">
+                    <h4>Our Menu</h4>
+                    <a href="menu.html#menu">Dinner Menu</a>
+                    <a href="menu.html#menu">Omakase Experience</a>
+                    <a href="about.html#about">Our Chefs</a>
+                    <a href="menu.html#menu">Sake Pairings</a>
+                </div>
+                <div class="footer-link-col">
+                    <h4>Visit Us</h4>
+                    <a href="../index.html#contact">Locations</a>
+                    <a href="../index.html#contact">Opening Hours</a>
+                    <a href="../index.html#contact">Private Dining</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+                <div class="footer-link-col">
+                    <h4>social links</h4>
+                    <a href="../index.html#contact">instagram</a>
+                    <a href="../index.html#contact">facebook</a>
+                    <a href="../index.html#contact">twitter</a>
+                    <a href="../index.html#contact">youtube</a>
+                </div>
+                <div class="footer-link-col">
+                    <h4>Resources</h4>
+                    <a href="../index.html#blog">Blog</a>
+                    <a href="../index.html#faq">FAQ</a>
+                    <a href="../index.html#careers">Careers</a>
+                    <a href="../index.html#privacy">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

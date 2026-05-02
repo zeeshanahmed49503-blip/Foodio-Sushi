@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <style>
+            .intro{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                z-index: 999;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transition: 1s;
+            }
+            .intro1{
+                /* width: 50%; */
+                height: 100%;
+                background-color: antiquewhite;
+                animation: intros 3s forwards;
+                position: relative;
+            }
+            .intro1::after{
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                width: 100px;
+                height: 100%;
+                background-color: darkred;
+                z-index: 99;
+            }
+            .intro2{
+                /* width: 48%; */
+                height: 100%;
+                background-color: antiquewhite;
+position: relative;
+                                animation: intros 3s forwards;
+
+            }
+              .intro2::after{
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100%;
+                background-color: darkred;
+                z-index: 99;
+            }
+            @keyframes intros{
+                0%{
+width: 0%;
+                }
+                50%{
+width: 30%;
+                }
+                100%{
+
+                    width: 5%;
+                }
+               
+            }
+            .intro img{
+                height: 250px;
+                animation: Inimg 7s infinite;
+            }
+            @keyframes Inimg{
+                0%{
+
+                }
+                50%{
+rotate: 100deg;
+scale: 1.6;
+                }
+                100%{
+
+                }
+            }
+            .content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .content h1{
+                color: white;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="intro">
+        <div class="intro1"></div>
+        <div class="content">
+            <img src="Assets/sushi plate.png" alt="">
+            <h1>sushi</h1>
+        </div>
+
+        <div class="intro2"></div>
+    </div>
+
+    <div class="main-container">
+        <nav class="navbar">
+            <div class="nav-container">
+
+
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Assets/sushi logo.png" alt="Food Logo">
+                    </a>
+                </div>
+
+                <ul class="nav-group">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-last">
+                    <div class="icon-circle">
+                        <svg width="17" height="17" class="icon-i" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+
+                    <div class="icon-circle">
+                        <svg width="18" height="18" class="icon-i" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="menu-toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="landing-page">
+            <h1 class="head">taste<img src="Assets/sushi plate.png" alt=""> that</h1>
+            <h1 class="head">bring happiness</h1>
+            <video src="Assets/5223104-hd_1920_1080_25fps.mp4" width="100%" autoplay loop muted></video>
+        </section>
+
+        <section class="catering-section" id="caterings">
+            <div class="sec-header">
+                <span class="badge"><i class="fa-solid fa-pizza-slice"></i> Sushi presents</span>
+                <h2>SPECIAL <span>CATERINGS</span></h2>
+            </div>
+
+            <div class="cards-container">
+                <div class="catering-card">
+                    <div class="card-img">
+                        <img src="Assets/item1.png" alt="Special Pizza">
+                    </div>
+                    <h3>Chiken tikka</h3>
+                    <p class="description">Crispy thin crust with fresh tomatoes, mozzarella, and basil.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="item-count">26 Items</button>
+                </div>
+
+                <div class="catering-card">
+                    <div class="card-img">
+                        <img src="Assets/sushi plate.png" alt="Chicken Biryani">
+                    </div>
+                    <h3>Premium Sushi</h3>
+                    <p class="description">Aromatic basmati rice layered with tender spiced chicken.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="item-count">16 Items</button>
+                </div>
+
+                <div class="catering-card">
+                    <div class="card-img">
+                        <img src="Assets/item-3.png" alt="Chicken Tikka">
+                    </div>
+                    <h3>Dragon Roll</h3>
+                    <p class="description">Tender, marinated chicken pieces grilled with smoky spices.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="item-count">17 Items</button>
+                </div>
+
+                <div class="catering-card">
+                    <div class="card-img">
+                        <img src="Assets/item-4.png" alt="Veg Chow Mein">
+                    </div>
+                    <h3>Tempura Shrimp</h3>
+                    <p class="description">Stir-fried noodles with crunchy vegetables and savory sauce.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="item-count">9 Items</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why choose <span>us?</span></h2>
+                    <p>Experience the art of authentic Japanese cuisine with premium quality and friendly service. with
+                        over 30 branches.</p>
+                </div>
+
+                <div class="grid-layout">
+
+                    <div class="feature-column left">
+                        <div class="feature-item">
+                            <div class="icon-box"><i class="fa-solid fa-fish-fins"></i></div>
+                            <h3>Expert Chefs</h3>
+                            <p>Our certified sushi masters craft each dish with top-tier accuracy and passion.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-box"><i class="fa-solid fa-筷子"></i><i class="fa-solid fa-bowl-food"></i>
+                            </div>
+                            <h3>Fresh & Fast</h3>
+                            <p>Sourced daily, prepared quickly for an exceptional dining experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="image-center">
+                        <div class="image-frame">
+                            <img src="Assets/sushi plate.png" alt="Sushi Plate">
+                        </div>
+                    </div>
+
+                    <div class="feature-column right">
+                        <div class="feature-item">
+                            <div class="icon-box"><i class="fa-solid fa-award"></i></div>
+                            <h3>Premium Quality</h3>
+                            <p>Only the finest ingredients for authentic flavors straight from Japan.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
+                            <h3>Diverse Menu</h3>
+                            <p>Explore beyond sushi with ramen, sake, tempura, and traditional dishes.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-header">
+                    <h2>Why Dine <span>with Us?</span></h2>
+                    <p>From traditional nigiri to modern fusion creations, our menu is designed to tantalize your taste
+                        buds with the freshest catch of the day.</p>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="grid-block image-block">
+                        <div class="img-wrapper-top">
+                            <img src="Assets/about-img-1.webp" alt="Sushi Bowl">
+                        </div>
+                    </div>
+
+                    <div class="grid-block content-block purple-bg">
+                        <div class="block-icon"><i class="fa-solid fa-heart"></i></div>
+                        <h3>Authentic Sushi Mastery.</h3>
+                        <p>At the heart of our kitchen lies a deep respect for tradition. We carefully prepare premium
+                            Japanese rice and apply time-honored curing techniques to bring out its natural flavor and
+                            texture. Each ingredient is chosen with intention, and every roll is crafted with patience
+                            and skill.</p>
+                        <button class="cta-btn">View Menu <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="about-grid about-grid-2">
+
+
+                    <div class="grid-block content-block peach-bg">
+                        <div class="block-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+                        <h3>Locally Sourced Fish.</h3>
+                        <p>We use only the finest Japanese rice and follow traditional curing methods passed down
+                            through generations. Every ingredient is carefully selected to preserve authenticity and
+                            enhance flavor. Our chefs craft each piece with precision and passion, ensuring that every
+                            bite delivers a perfect balance of texture, freshness, and taste.</p>
+                        <button class="cta-btn">View Menu <i class="fa-solid fa-arrow-right"></i></button>
+
+                    </div>
+                    <div class="grid-block image-block-shaped peach-bg">
+                        <div class="shape-container">
+                            <img src="Assets/about-img-2.webp" alt="Sushi Preparation">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="about-grid about-grid-3">
+
+                    <div class="grid-block image-block">
+                        <div class="img-wrapper-top">
+                            <img src="Assets/about-img-3webp.jpg" alt="Sushi Bowl">
+                        </div>
+                    </div>
+
+                    <div class="grid-block content-block purple-bg">
+                        <div class="block-icon"><i class="fa-solid fa-star"></i></div>
+                        <h3>Daily Fresh Sourcing.</h3>
+                        <p>We believe great sushi starts at the docks. Our seafood is flown in daily from world-class
+                            markets, ensuring that every slice of sashimi offers the pure, clean taste of the ocean at
+                            its absolute peak.</p>
+                        <button class="cta-btn">View Menu <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="menu-news-section">
+            <h2 class="section-title"><strong>Featured</strong> gallery</h2>
+
+            <div class="menu-grid">
+                <div class="left-col">
+                    <div class="menu-card img-card card-main">
+                        <h3>Omakase Chef's Special <br> A Journey of Taste</h3>
+                        <span class="time-stamp">Available Daily</span>
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <div class="menu-card card-purple">
+                        <span class="badge2">New</span>
+                        <h4>Truffle Mayo Roll, Redefining <br> Fusion Flavor</h4>
+                        <span class="time-stamp">1 hour ago</span>
+                    </div>
+
+                    <div class="menu-card card-grey">
+                        <div class="icon-wrapper"><i class="fa-solid fa-fish-fins"></i></div>
+                        <h4>Chef predicts massive trend <br> in Aburi Sushi</h4>
+                        <span class="time-stamp">5 hours ago</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-container">
+            <div class="gallery-grid">
+
+                <div class="gallery-item item-1">
+                    <img src="Assets/gal2.jpg">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+                <div class="gallery-item item-2">
+                    <img src="Assets/gal2.webp">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+                <div class="gallery-item item-3">
+                    <img src="Assets/gal4.jpg" alt="Tea tasting">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+                <div class="gallery-item item-4">
+                    <img src="Assets/gal3.jpg" alt="Agricultural workshops">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+                <div class="gallery-item item-5">
+                    <img src="Assets/gal5.jpg" alt="Tea tasting">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+                <div class="gallery-item item-6">
+                    <img src="Assets/about-img-1.webp" alt="A miniature village">
+                    <div class="item-overlay">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="sushi-cta">
+            <div class="sushi-cta-text">
+                <h2>Taste the delicious <br> sushi food.</h2>
+                <p>Find the perfect table for your culinary journey, easily reserve in minutes.</p>
+            </div>
+
+            <div class="sushi-cta-form-container">
+                <div class="input-card">
+                    <div class="input-label">
+                        <span class="dot"></span> Your Location
+                    </div>
+                    <div class="input-field-wrapper">
+                        <input type="text" placeholder="Enter neighborhood...">
+                        <button class="clear-btn">✖</button>
+                    </div>
+                </div>
+                <button class="search-btn">
+                    <span class="btn-text">Find table</span>
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="white">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+    </div>
+
+     <footer class="sushi-footer">
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+                <h1>sushi</h1>
+                <p class="footer-desc">
+                    Bringing the freshest catch from the ocean directly to your plate. Experience authentic, handcrafted
+                    sushi mastery in the heart of the city.
+                </p>
+                <button class="cta-btn">book now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="footer-links-container">
+                <div class="footer-link-col">
+                    <h4>Explore</h4>
+                    <a href="#menu">special Menu's</a>
+                    <a href="#about">About us</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact us</a>
+                </div>
+                <div class="footer-link-col">
+                    <h4>Our Menu</h4>
+                    <a href="#menu">Dinner Menu</a>
+                    <a href="#menu">Omakase Experience</a>
+                    <a href="#about">Our Chefs</a>
+                    <a href="#menu">Sake Pairings</a>
+                </div>
+                <div class="footer-link-col">
+                    <h4>Visit Us</h4>
+                    <a href="#contact">Locations</a>
+                    <a href="#contact">Opening Hours</a>
+                    <a href="#contact">Private Dining</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-link-col">
+                    <h4>social links</h4>
+                    <a href="#contact">instagram</a>
+                    <a href="#contact">facebook</a>
+                    <a href="#contact">twitter</a>
+                    <a href="#contact">youtube</a>
+                </div>
+                <div class="footer-link-col">
+                    <h4>Resources</h4>
+                    <a href="#blog">Blog</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#privacy">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

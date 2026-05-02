@@ -1,0 +1,157 @@
+@media(min-width:1600px){
+h1{
+  font-size: 140px;
+  
+}
+h1 img{
+  width: 140px;
+  filter: saturate(0);
+  animation: img 10s infinite ease;
+  transition: .5s;
+  
+}
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .cards-container {
+    justify-content: space-between;
+    gap: 18px;
+    padding: 0 0;
+  }
+  .catering-section{padding: 0;}
+
+  .catering-card {
+    min-width: 45%;
+    max-width: 45%;
+    padding: 24px 10px;
+  }
+
+  .card-img img {
+    height: 160px;
+  }
+
+  .catering-card h3 {
+    font-size: 24px;
+  }
+
+  .catering-card .description {
+    font-size: 13px;
+    padding: 0 16px;
+  }
+
+  .item-count {
+    padding: 7px 20px;
+  }
+}
+
+@media (max-width: 768px){
+  .landing-page .mainImg{
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 0 ;
+  }
+}
+
+/* Mobile devices — stack cards vertically and scale typography/images */
+@media (max-width: 630px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 0 10px;
+  }
+
+  .catering-card {
+    width: 100%;
+    max-width: 420px;
+    min-width: auto;
+    padding: 20px;
+    border-radius: 40px 40px 18px 18px;
+  }
+
+  .card-img img {
+    height: 140px;
+  }
+
+  .catering-card h3 {
+    font-size: 20px;
+  }
+
+  .catering-card .description {
+    font-size: 13px;
+    padding: 0 12px;
+  }
+
+  .item-count {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Hamburger Styles */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+/* Mobile Responsiveness (Tablets and Phones) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show hamburger */
+        order: 1;
+        margin-left: 10px;
+    }
+
+    .icon-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkred;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.icon-circle svg{
+  color: white;
+  width: 15px;
+  height: 15px;
+  
+}
+    
+    .logo { order: 2; }
+    .nav-last { order: 3; }
+
+    .nav-group {
+        position: absolute;
+        top: 80px; /* Adjust based on navbar height */
+        left: -100%; /* Hidden off-screen */
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        padding: 20px 0px;
+        gap: 20px;
+    }
+
+    .nav-group.active {
+        left: 0; /* Slide in */
+    }
+
+    .nav-container {
+        padding: 6px 20px;
+    }
+}
